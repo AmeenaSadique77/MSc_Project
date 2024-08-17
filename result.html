@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="result-page">
+    <div class="container">
+        <h1>Prediction Result for {{ gene }}</h1>
+        <div class="result-container">
+            <p><strong>Gene:</strong> {{ gene }}</p>
+            <p><strong>Phenotype:</strong> {{ phenotype }}</p>
+            <p><strong>Predicted Phenotype:</strong> {{ result['Predicted Phenotype_x'] }}</p>
+            <p><strong>Activity Score:</strong> {{ result['Activity Score_x'] }}</p>
+            <p><strong>EHR Priority Result Notation:</strong> {{ result['EHR Priority Result Notation'] }}</p>
+            <p><strong>Consultation Text:</strong> {{ result['Consultation Text'] }}</p>
+            <p><strong>Allele 1 Function:</strong> {{ result['Allele 1 Function'] }}</p>
+            <p><strong>Allele 2 Function:</strong> {{ result['Allele 2 Function'] }}</p>
+            <p><strong>Activity Value Allele 1:</strong> {{ result['Activity Value Allele 1'] }}</p>
+            <p><strong>Activity Value Allele 2:</strong> {{ result['Activity Value Allele 2'] }}</p>
+            <p><strong>Description:</strong> {{ result['Description'] }}</p>
+        </div>
+        <a href="/" class="back-button">Make Another Prediction</a>
+    </div>
+</body>
+</html>
